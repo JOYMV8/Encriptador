@@ -4,7 +4,9 @@ Este proyecto transforma tus mensajes en algo mucho más interesante. Imagina qu
 
 ¿Cómo usarlo? 🚀
 1.-Escribe tu mensaje en el cuadro de texto indicado.
+
 2.-Presiona "Encriptar" o "Desencriptar" según lo que necesites.
+
 3.-El resultado aparecerá en el cuadro de resultados, y con un simple click esta listo para ser copiado y compartido.
 
 ¿Cómo funciona?
