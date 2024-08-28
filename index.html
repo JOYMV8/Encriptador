@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador y Desencriptador (Descubriendo el mensaje)</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1>Encriptador y Desencriptador (Descubriendo el mensaje)</h1>
+                    <p class="texto__parrafo">Ingresa el texto que deseas encriptar o desencriptar:</p>
+                </div>
+                <!-- Usamos <textarea> en lugar de <input> -->
+                <textarea id="TextoUsuario" rows="5" cols="40" class="container__input-texto" placeholder="Ingresa el texto aquí (solo minúsculas)"></textarea>
+                <div class="container__botones">
+                    <button onclick="EncriptarTexto();" class="container__boton">Encriptar</button>
+                    <button onclick="DesencriptarTexto();" class="container__boton">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de resultado separado -->
+    <div class="container__resultado">
+        <img src="./img/Muñeco.png" alt="Muñeco" id="imgResultado" class="resultado__imagen" style="display: none;">
+        <h2>Resultado:</h2>
+        <p id="ResultadoTexto" class="resultado__parrafo" style="display: none;">Ningún mensaje fue encontrado</p>
+        <p id="InstruccionTexto" class="resultado__instruccion">Ingresa el texto que desees encriptar o desencriptar en la parte correspondiente.</p>
+        <!-- Botón para copiar el texto, inicialmente oculto -->
+        <button id="copiarBtn" onclick="copiarTexto();" class="container__boton" style="display: none;">Copiar</button>
+    </div>
+
+    <footer class="rodapie">
+        <p>Desarrollado por Joselin Moreno Violante</p>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

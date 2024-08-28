@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #0A1931; /* Azul oscuro */
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%), url('./img/code.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    padding: 20px; /* Espacio adicional para que no toquen los extremos */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño del contenedor principal */
+    border-radius: 24px;
+    background-color: #F5F8FA;
+    box-shadow: 4px 4px 20px rgba(1, 8, 14, 0.1);
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem; /* Espacio inferior para evitar solapamiento con el pie de página */
+}
+
+.container__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espacio entre los recuadros */
+}
+
+.container__informaciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container__resultado {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem; /* Margin en la parte superior */
+    margin-bottom: 2rem; /* Añade espacio debajo del recuadro de resultados */
+    border-radius: 12px;
+    background-color: #F5F8FA;
+    box-shadow: 4px 4px 20px rgba(1, 8, 14, 0.1);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #D8DFE8;
+    display: flex; /* Para alinear el contenido de la caja */
+    flex-direction: column; /* Para organizar los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    flex-grow: 1; /* Permite que el contenedor crezca con el espacio disponible */
+}
+
+.resultado__imagen {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    display: none; /* La imagen está oculta por defecto */
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 36px;
+    color: #0A1931;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 18px;
+    color: #0A1931;
+    margin-bottom: 1rem;
+}
+
+.container__input-texto {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8DFE8;
+    color: #0A1931;
+    padding: 1rem;
+    font-size: 18px;
+    resize: none;
+}
+
+.container__botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.container__boton {
+    border-radius: 12px;
+    background-color: #0A1931;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+}
+
+.container__boton:disabled {
+    background-color: #898989;
+}
+
+.resultado__parrafo {
+    font-size: 18px;
+    color: #0A1931;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    color: #0A1931;
+    font-size: 14px;
+    padding: 1rem 0;
+    background-color: #F5F8FA;
+    width: 100%;
+    margin-top: auto; /* Asegura que el footer se mantenga en la parte inferior */
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries para organizar en fila cuando sea mayor a 1200px */
+@media (min-width: 1200px) {
+    body {
+        flex-direction: row; /* Organiza el contenido en fila */
+        align-items: flex-start; /* Alinea el contenido en la parte superior */
+        justify-content: center; /* Centra el contenido horizontalmente */
+    }
+
+    .container {
+        max-width: 50%; /* Ajusta el tamaño del contenedor principal */
+        display: flex;
+        flex-direction: row;
+        align-items: stretch; /* Asegura que ambos recuadros se estiren para tener la misma altura */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+
+    .container__contenido {
+        flex: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+    }
+
+    .container__resultado {
+        max-width: 50%; /* Ajusta el tamaño del cuadro de resultado */
+        margin-top: 0; /* Elimina el margen superior */
+        margin-left: 2rem; /* Añade margen izquierdo */
+        flex: 1; /* Hace que el recuadro de resultado ocupe todo el espacio disponible */
+        height: auto; /* Asegura que el cuadro de resultado se expanda según el contenido */
+        min-height: 100%; /* Asegura que el cuadro de resultado tenga la misma altura que el contenedor de entrada */
+    }
+
+    .container__informaciones,
+    .container__resultado {
+        height: 100%; /* Asegura que ambos contenedores tengan la misma altura */
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
+    }
+}
